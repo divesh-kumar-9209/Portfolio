@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hexagonal Shapes Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to right bottom, #ff7e5f 0%, #feb47b 25%, #a8d8ea 50%, #93a5cf 75%, #b690d1 100%);
+      background-size: 200% 200%;
+      animation: gradientMove 10s linear infinite;
+      height: 100vh;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    body::before {
+      content: "";
+      width: 100%;
+      border-bottom: 2px solid #3498db;
+      position: absolute;
+      top: 60px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .social-links img {
+      width: 30px; /* Adjust the width as needed */
+      height: 30px; /* Adjust the height as needed */
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .social-links img:hover {
+      transform: scale(1.2); /* Adjust the scale factor as needed */
+    }
+
+    .hexagon {
+      width: 100px;
+      height: 57.74px;
+      background-color: transparent;
+      position: relative;
+      margin: 10px;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    .hexagon:hover {
+      border-color: #3498db;
+    }
+
+    .hexagon video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hexagon a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .social-links-left {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .social-links-right {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .social-links-right img {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="social-links social-links-left">
+    <!-- Replace "Main logo.png" with your local image file for the main logo -->
+    <a href="#" target="_blank"><img src="Main logo.png" alt="Main Logo" onmouseover="this.src='Main logo-hover.png'" onmouseout="this.src='Main logo.png'"></a>
+  </div>
+
+  <div class="social-links social-links-right">
+    <!-- Replace "linkedin.png" and "linkedin-hover.png" with your local image files for LinkedIn -->
+    <a href="#" target="_blank"><img src="linkedin.png" alt="LinkedIn" onmouseover="this.src='linkedin-hover.png'" onmouseout="this.src='linkedin.png'"></a>
+    <!-- Replace "Github.png" and "Github-hover.png" with your local image files for GitHub -->
+    <a href="https://github.com" target="_blank"><img src="Github.png" alt="GitHub" onmouseover="this.src='Github-hover.png'" onmouseout="this.src='Github.png'"></a>
+    <!-- Replace "gmail.png" and "gmail-hover.png" with your local image files for Gmail -->
+    <a href="#" target="_blank"><img src="gmail.png" alt="Gmail" onmouseover="this.src='gmail-hover.png'" onmouseout="this.src='gmail.png'"></a>
+  </div>
+
+  <div class="container">
+    <div class="hexagon">
+      <video autoplay loop muted playsinline>
+        <source src="benzene-ring.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a href="#">Center</a>
+    </div>
+    <!-- Add more hexagons as needed -->
+  </div>
+</body>
+</html>

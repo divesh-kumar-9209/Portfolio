@@ -1,0 +1,118 @@
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <Title>Index Page</Title>
+
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #f4f4f4;
+        }
+
+        body::before {
+          content: "";
+          width: 100%;
+          border-bottom: 2px solid #000000; /* Add a bottom border to the body */
+          position: absolute;
+          top: 90px; /* Adjust the top position to place the line below the social links */
+        }
+
+        .social-links {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .social-links a {
+      color: #000;
+      text-decoration: none;
+    }
+  
+        .hexagon-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin-top: -200px;
+        }
+    
+        .hexagon-group {
+          display: flex;
+        }
+    
+        .hexagon {
+          width:  250px;
+          height: 300px;
+          background-color: transparent;
+          position: relative;
+          margin: 10px; /* Adjust margin for spacing */
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          background-image: url('benzene-ring.png');
+          background-size: 100% 100%;
+        }
+    
+        .hexagon:not(:last-child) {
+          margin-right: 20px; /* Adjust the margin as needed */
+        }
+    
+        .hexagon a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          color: #000000;
+          text-decoration: none;
+        }
+        .hexagon:nth-child(1) { margin-top: -180px; margin-left: 0; }
+        .hexagon:nth-child(2) { margin-top: 312px; margin-left: -135; }
+        .hexagon:nth-child(3) { margin-top: 312px; margin-left: 5; }
+        .hexagon:nth-child(4) { margin-top: 797px; margin-left: -130; }
+        .hexagon:nth-child(5) { margin-top: 312px; margin-left: -135; }
+        
+    .social-links-right {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .social-links-right a {
+      margin-right: 5px;
+    }
+      </style>
+    
+
+</head>
+<body>
+
+  <div class="social-links">
+
+    <a href="file:///E:/Coding/index.html"><img src="Main logo.png" height="60" width="38" style="vertical-align:middle;margin:0px 20px"></a>
+  </div>
+    <div class="social-links social-links-right">
+    <a href="https://www.linkedin.com/in/divesh-kumar-94730b219"><img src="linkedin logo.png" height="37" width="37" align="right" style="vertical-align:right;margin:10px 10px"></a>
+    <a href="https://github.com/ash-jhason"><img src="github logo.png" height="32" width="32" align="right" style="vertical-align:right;margin:11px 20px"></a>
+    <a href="mailto:diveshkumar9209@gmail.com"><img src="Gmail Logo.png" height="28" width="30" align="right" style="vertical-align:right;margin:13px 18px"></a>
+    <br>
+
+     </div>
+    
+    <br><br><br><br><br>
+  <div class="hexagon-container">
+    <div class="hexagon"><a href="page1.html">Page 1</a></div>
+    <div class="hexagon"><a href="page2.html">Page 2</a></div>
+    <div class="hexagon"><a href="page3.html">Page 3</a></div>
+    <div class="hexagon"><a href="page4.html">Page 4</a></div>
+    <div class="hexagon"><a href="page5.html">Page 5</a></div>
+  </div>
+
+
+</body>
+</html>
